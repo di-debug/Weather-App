@@ -1,0 +1,250 @@
+/* General styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./assets/Cloudy.jpg);
+  font-family: Arial, sans-serif;
+  background-color: #172435;
+  color: white;
+  background-size: cover;
+  background-position: center center;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Header styles */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color:#172435;
+  padding: 0 20px;
+}
+
+.logo a {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.col-right {
+  display: flex;
+}
+
+.col-right li {
+  margin-left: 20px;
+}
+
+.col-right li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #004E65;
+}
+
+.search-bar form {
+  position: relative;
+}
+
+form{
+  border-radius: 5px;
+  background-color: #444;
+
+}
+
+input[type=text] {
+  background-color: #444;
+  color: white;
+  border: none;
+  padding: 15px;
+  padding-left: 25px;
+  width: 150px;
+  height: 25px;
+  font-size: 14px;
+}
+
+button {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+button .fa-search{
+  font-size: 18px;
+  color: #fff;
+}
+
+
+
+/* input:before {
+  content: "\f002";
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  top: 7px;
+  left: 7px;
+} */
+
+#inputBox:focus {
+  outline: none;
+}
+
+#inputBox::placeholder {
+  color: #fff;
+  /* opacity:  */
+}
+
+
+.fa-sync {
+  animation: fa-spin 2s infinite linear;
+}
+
+@keyframes fa-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Define some common styles */
+
+.wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 700px;
+  height: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.1);
+  backdrop-filter: saturate(180%) blur(2px);
+  border-radius: 15px;
+}
+
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.small {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+
+
+/* Style specific elements */
+
+.cityName {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.stateName {
+  font-size: 24px;
+  opacity: 0.7;
+}
+
+
+.ico-card img {
+  padding: 10px;
+  background-size: cover;
+  background-color:  #007C85;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.temprature {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.top {
+  font-size: 24px;
+  vertical-align: top;
+}
+
+.weatherStatus {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.updatetime {
+  font-size: 14px;
+}
+
+.small + sup {
+  font-size: 14px;
+}
+
+.small + p {
+  margin-left: 10px;
+}
+
+.highlight {
+  margin-left: 5px;
+}
+
+.small + p + p {
+  margin-left: 20px;
+}
+
+#humidity{
+  margin-left: 5em;
+}
+
+/* Adjust some styles for mobile */
+
+@media screen and (max-width: 480px) {
+  .flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .small + p {
+    margin-top: 5px;
+    margin-left: 0;
+  }
+
+  .small + p + p {
+    margin-left: 0;
+  }
+}
+
+
+

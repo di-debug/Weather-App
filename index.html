@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <!-- adding the css file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+<body>
+
+    <!-- container for holding the weather card -->
+
+  <nav class="height-10 ">
+        <div class="logo">
+          <a href="#">Forecast</a> <!-- logo named as Forecast -->
+        </div>
+        <ul class="col-right ">
+          <li><a id="refreshBtn" href="#"><i class="fas fa-sync"></i></a></li> <!-- reload icon -->
+          <li><a href="#"><i class="fas fa-star"></i></a></li> <!-- favorite icon -->
+          <li><a href="#"><i class="fas fa-thumbtack"></i></a></li> <!-- pin icon -->
+          <li class="search-bar">
+            <form onsubmit="getData(event)" class="searchData">
+                <input id="inputBox" type="text" placeholder="Search..." />
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+          </li>
+        </ul>
+  </nav>
+  <div class="wrap">
+    <section>
+        <div class="flex">
+            <p class="cityName" id="cityName">MAHABHARAT,</p>
+            <p class="stateName" id="stateName"> KURUKSHETRA</p>
+        </div>
+
+        <div class="flex">
+            <div class="ico-card">
+                <img width="150px" id="logoImage" src="./assets/snow-icon.png" alt="icon" />
+            </div>
+            <div class="temp-card">
+                <!-- unicode for degree celcius symbol -->
+                <p><span class="temprature" id="temprature">12</span><sup class="top">&#8451;</sup></p>
+            </div>
+        </div>
+
+        <div>
+            <p class="weatherStatus" id="weatherStatus">Mostly Cloudy</p>
+            <p class="updatetime" id="updatetime">Updated as of </p>
+        </div>
+
+        <div class="flex">
+            <p><span class="small" id="feelslike">Feels like 18</span><sup>o</sup></p>
+            <p class="small" id="wind">wind 5 km/hr</p>
+            <p class="small" id="visibility">visibility</p>
+        </div>
+
+        <div class="flex">
+            <p id="barometer" class="small">Barometer</p>
+            <p id="humidity" class="small">Humidity</p>
+            <p id="dewPoint" class="small">Dew Point</p>
+        </div>
+
+        <div class="flex">
+            <p id="qIndex" class="small">Air Quality Index</p>
+            <p id="moderate" class="small">__ </p>
+        </div>
+    </section>
+  </div>    
+
+  <!-- adding the javascript file -->
+  <script src="/script.js"></script>
+</body>
+
+</html>
